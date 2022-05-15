@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddBookControlor">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="329.0" minWidth="9.0" prefWidth="205.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="591.0" minWidth="10.0" prefWidth="395.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="207.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="175.0" minHeight="0.0" prefHeight="165.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TextField fx:id="tfFirstName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="329.0" GridPane.columnIndex="1" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom" translateX="95.0" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" translateX="95.0" GridPane.rowIndex="1" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" translateX="95.0" GridPane.rowIndex="2" />
+      <TextField fx:id="tfLastName" maxWidth="-Infinity" prefHeight="25.0" prefWidth="328.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField fx:id="tfEmail" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="328.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TableView fx:id="table" prefHeight="57.0" prefWidth="196.0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+        <columns>
+          <TableColumn fx:id="firstNameCol" prefWidth="188.0" text="Prenom" />
+          <TableColumn fx:id="lastNameCol" minWidth="0.0" prefWidth="210.0" text="Nom" />
+            <TableColumn fx:id="emailCol" prefWidth="200.0" text="Email" />
+        </columns>
+      </TableView>
+      <Button fx:id="addBtn" mnemonicParsing="false" onAction="#add" text="Ajouter à la table" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button fx:id="removeBtn" mnemonicParsing="false" text="Supprimer" translateX="30.0" GridPane.rowIndex="5" />
+      <Button fx:id="importBtn" mnemonicParsing="false" onAction="#importer" text="Importer" translateX="190.0" GridPane.rowIndex="5" />
+      <Button fx:id="exportBtn" mnemonicParsing="false" text="Exporter" translateX="140.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Button fx:id="quitBtn" mnemonicParsing="false" text="Quitter" translateX="300.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+   </children>
+</GridPane>
